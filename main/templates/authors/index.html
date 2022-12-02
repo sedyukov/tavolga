@@ -1,0 +1,34 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+
+{% block title %}авторы{% endblock %}
+
+
+
+
+{% block content %}
+<h1 style="text-align: center;">Авторы:</h1>
+<br>
+<br>
+<br>
+{% for a in authors %}
+
+
+<div>
+	<ul>
+		<li>
+			<img class="fit-picture" src="{{ a.photo.url |slice:"5:"  }}" alt="My image">
+
+		</li>
+		<li style="padding-left: 20%">
+				<h2> <a href ="http://127.0.0.1:8000/tavolga/author/{{a.id}}/">{{a.name}} {{a.soname}}</a> </h2>
+
+		</li>
+	</ul>
+	</div>
+<hr>
+	{% endfor %}
+
+
+{% endblock %}
+

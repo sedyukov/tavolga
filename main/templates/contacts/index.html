@@ -1,0 +1,30 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}о нас{% endblock %}
+
+{% block content %}
+<section role="search">
+	<div>
+		<h2>О нас</h2>
+		{% autoescape off %}
+		{{cont.about}}
+		{% endautoescape %}
+
+		<h2>контакты</h2>
+
+		{% if cont.vk %}
+		<p><a href="{{ cont.vk }}">наша страница вконтакте</a>
+		{% endif %}
+		{% if cont.fb %}
+		<p><a href="{{ cont.fb }}">наша страница на facebook</a>
+		{% endif %}
+		{% if cont.tg %}
+		<p><a href="{{ cont.fb }}">наш tg-канал</a>
+		{% endif %}
+		{% if cont.fb %}
+		<p><a href="{{ cont.fb }}">наш instagram</a>
+		{% endif %}
+	</div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}поиск{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<div class="search">
+		   <form action="{%url 'index_serch_result' %}"  method="get">
+			   <input type="text" class="searchTerm" name="q" placeholder="ПОИСК" size="1000">
+			</form>
+	   </div>
+
+<section role="search">
+	{% if no_result %}
+	<h3>{{ no_result }}</h3>
+	{% endif %}
+
+		{% if mat %}
+	<div class="news">
+
+	<h4>Найдено материалов:</h4>
+	{% for m in mat %}
+<div>
+<h4> <a href ="http://127.0.0.1:8000/tavolga/number/{{m.number.id}}/">{{m.name}} {{ m.auth.name}} {{m.auth.soname}}</a> </h4>
+</div>
+	{% endfor %}
+	<hr>
+			</div>
+	{% endif %}
+
+	{% if author %}
+	<div class="news">
+	<h3>Авторы:</h3>
+	{% for a in author %}
+<div>
+	<h4> <a href ="http://127.0.0.1:8000/tavolga/author/{{a.id}}/">{{ a.name}} {{a.soname}}</a> </h4>
+</div>
+	{% endfor %}
+	<hr>
+		</div>
+	{% endif %}
+
+</section>
+
+
+
+{% endblock %}

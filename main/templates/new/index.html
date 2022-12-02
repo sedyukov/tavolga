@@ -1,0 +1,14 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}новости{% endblock %}
+
+{% block content %}
+<div class="news">
+    <h2> {{ new.name }}</h2>
+    {% autoescape off %}
+    {{new.text }}
+    {% endautoescape %}
+
+</div>
+
+{% endblock %}

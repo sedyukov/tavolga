@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+<!--		<link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">-->
+		<link rel="stylesheet" type="text/css"
+			  href="{% static '/style.css' %}">
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<meta charset="UTF-8">
+		<title>Таволга - {% block title %}{% endblock %}</title>
+	</head>
+
+	<body>
+	<header>
+
+		<a style="height:40px;width: 50%;display: block;padding-left: 30%;" href="http://127.0.0.1:8000/tavolga/"></a>
+
+		<ul>
+			<li style="float: left;">
+					<a href="http://127.0.0.1:8000/tavolga/search/"><img class="serachlup" src="/static/search.png"></a>
+			</li>
+
+			<li style="float: right;">
+				<div id="pencet">
+				<span></span>
+				<span></span>
+				<span></span>
+			  </div>
+			<div id="links-hide-menu">
+							<a href="http://127.0.0.1:8000/tavolga/"><h3>главная</h3></a>
+							<hr>
+							<a href="http://127.0.0.1:8000/tavolga/numbers/"><h3>все номера</h3></a>
+							<hr>
+							<a href="http://127.0.0.1:8000/tavolga/news/"><h3>новости</h3></a>
+							<hr>
+							<a href="http://127.0.0.1:8000/tavolga/authors/"><h3>авторы</h3></a>
+							<hr>
+							<a href="http://127.0.0.1:8000/tavolga/about/"><h3>о нас</h3></a>
+			</div>
+
+			</li>
+		</ul>
+	</header>
+	<hr style="margin-top:100px;">
+		<a id="button"></a>
+
+		{% block content %}
+		{% endblock %}
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer class="footer">
+	<ul class="footer">
+		{% if cont.vk %}
+		<li class="lifooter">
+		<a href="{{ cont.vk }}"><img class="imgfooter" src="/static/vk.svg" alt=""></a>
+		</li>
+		{% endif %}
+		{% if cont.fb %}
+		<li class="lifooter">
+		<a href="{{ cont.fb }}"><img class="imgfooter" src="/static/fb.svg" alt=""></a>
+			</li>
+		{% endif %}
+		{% if cont.tg %}
+			<li class="lifooter">
+		<a href="{{ cont.tg }}"><img class="imgfooter" src="/static/tg.svg" alt=""></a>
+			</li>
+		{% endif %}
+		{% if cont.inst %}
+		<li class="lifooter">
+		<a href="{{ cont.inst }}"><img class="imgfooter" src="/static/inst.svg" alt=""></a>
+			</li>
+		{% endif %}
+	</ul>
+		</footer>
+
+	</body>
+	<script src="/static/script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+</html>
