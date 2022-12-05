@@ -24,7 +24,7 @@
 	<h4>Найдено материалов:</h4>
 	{% for m in mat %}
 <div>
-<h4> <a href ="http://127.0.0.1:8000/tavolga/number/{{m.number.id}}/">{{m.name}} {{ m.auth.name}} {{m.auth.soname}}</a> </h4>
+<h4> <a href ="/tavolga/number/{{m.number.id}}/">{{m.name}} {{ m.auth.name}} {{m.auth.soname}}</a> </h4>
 </div>
 	{% endfor %}
 	<hr>
@@ -36,7 +36,7 @@
 	<h3>Авторы:</h3>
 	{% for a in author %}
 <div>
-	<h4> <a href ="http://127.0.0.1:8000/tavolga/author/{{a.id}}/">{{ a.name}} {{a.soname}}</a> </h4>
+	<h4> <a href ="/tavolga/author/{{a.id}}/">{{ a.name}} {{a.soname}}</a> </h4>
 </div>
 	{% endfor %}
 	<hr>

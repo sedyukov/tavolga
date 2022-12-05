@@ -5,7 +5,7 @@
 {% block content %}
 
 <div style="text-align: center; ">
-			<a href ="http://127.0.0.1:8000/tavolga/number/{{num.id}}/"><img class="fit-picture" style="width: 600px; height: auto;" src="{{ num.photo.url |slice:"5:" }}" alt="My image"></a>
+			<a href ="/tavolga/number/{{num.id}}/"><img class="fit-picture" style="width: 600px; height: auto;" src="{{ num.photo.url |slice:"5:" }}" alt="My image"></a>
 </div>
 <h1 style="text-align: center;">Новости:</h1>
 {% for n in news %}
@@ -13,7 +13,7 @@
     <h2> <a href ="new/{{n.id}}/">{{ n.name }}</a></h2>
     {% autoescape off %}
     {{n.text | truncatechars_html:300 }}
-    <a href ="http://127.0.0.1:8000/tavolga/new/{{n.id}}/">--> читать далее</a>
+    <a href ="/tavolga/new/{{n.id}}/">--> читать далее</a>
     {% endautoescape %}
 </div>
 

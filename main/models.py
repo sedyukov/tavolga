@@ -18,7 +18,7 @@ class Authors(models.Model):
         ordering = ['-soname']
 
     def link_draft(self):
-        return f'http://127.0.0.1:8000/mag/maglast/{self.id}/draft/'
+        return f'/mag/maglast/{self.id}/draft/'
 
 
 class Number(models.Model):
@@ -32,7 +32,7 @@ class Number(models.Model):
         return s
 
     def link_draft(self):
-        return f'http://127.0.0.1:8000/mag/maglast/{self.id}/draft/'
+        return f'/mag/maglast/{self.id}/draft/'
 
     class Meta:
         verbose_name_plural = 'Номера'
@@ -70,7 +70,7 @@ class News(models.Model):
         return self.name
 
     def link_draft(self):
-        return f'http://127.0.0.1:8000/mag/maglast/{self.id}/draft/'
+        return f'/mag/maglast/{self.id}/draft/'
 
     class Meta:
         verbose_name_plural = 'Новости'
@@ -89,7 +89,7 @@ class Contacts(models.Model):
         return 'Контакты'
 
     def link_draft(self):
-        return f'http://127.0.0.1:8000/mag/maglast/{self.id}/draft/'
+        return f'/mag/maglast/{self.id}/draft/'
 
     class Meta:
         verbose_name_plural = 'Контакт'
