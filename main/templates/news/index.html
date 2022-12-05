@@ -16,7 +16,7 @@
     <h2> <a href ="new/{{n.id}}/">{{ n.name }}</a></h2>
     {% autoescape off %}
     {{n.text | truncatechars_html:300 }}
-    <a href ="http://127.0.0.1:8000/tavolga/new/{{n.id}}/">--> читать далее</a>
+    <a href ="/tavolga/new/{{n.id}}/">--> читать далее</a>
     {% endautoescape %}
 
 </div>
