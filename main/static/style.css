@@ -4,7 +4,7 @@ body {
     color: #0a0a0a !important;
     margin: 0px;
     font-size: 140%
-}
+
 
 header{
     padding: 50px;
@@ -133,8 +133,8 @@ nav {
 div{
 }
 .mat{
-    padding-left: 30% !important;
-    padding-right:30% !important;
+    padding-left: 20% !important;
+    padding-right:20% !important;
     text-align: initial;
 }
 
