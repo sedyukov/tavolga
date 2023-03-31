@@ -3,7 +3,7 @@ from ckeditor.fields import RichTextField
 
 
 class Authors(models.Model):
-    photo = models.ImageField(upload_to='main/static/img/', verbose_name='Фото')
+    photo = models.ImageField(upload_to='static/img/', verbose_name='Фото')
     name = models.CharField(max_length=50, verbose_name='Имя')
     soname = models.CharField(max_length=50, verbose_name='Фамилия')
     bio = RichTextField(null=True, blank=True, verbose_name='Биография')
@@ -22,7 +22,7 @@ class Authors(models.Model):
 
 
 class Number(models.Model):
-    photo = models.ImageField(null=True, blank=True, upload_to='main/static/img/', verbose_name='Обложка')
+    photo = models.ImageField(null=True, blank=True, upload_to='static/img/', verbose_name='Обложка')
     name = models.CharField(max_length=50, verbose_name='Название номера')
     published = models.DateTimeField(auto_now_add=True, db_index=True, verbose_name='Создан')
     draft = models.BooleanField(verbose_name='Черновик', default=True)

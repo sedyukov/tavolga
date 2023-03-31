@@ -23,7 +23,7 @@
 <div>
 	<h3>Материалы на сайте:</h3>
 	{% for m in mat %}
-	<h3> <a href ="/tavolga/number/{{m.number.id}}/">{{m.name}}</a> </h3>
+	<h3> <a href ="/tavolga/number/{{m.number.id}}/#{{m.id}}">{{m.name}}</a> </h3>
 	{% endfor %}
 </div>
 {% endblock %}

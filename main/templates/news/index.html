@@ -13,7 +13,7 @@
 <br>
 {% for n in news %}
 <div class="news">
-    <h2> <a href ="new/{{n.id}}/">{{ n.name }}</a></h2>
+    <h2> <a href ="/tavolga/new/{{n.id}}/">{{ n.name }}</a></h2>
     {% autoescape off %}
     {{n.text | truncatechars_html:300 }}
     <a href ="/tavolga/new/{{n.id}}/">--> читать далее</a>
